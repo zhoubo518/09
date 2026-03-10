@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>社会工作法规与政策学习笔记</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "PingFang SC","Microsoft YaHei","Helvetica Neue",sans-serif; color: #2c2c2c; background: #f5f5f0; line-height: 1.8; padding: 20px; max-width: 900px; margin: 0 auto; }
+h1 { text-align: center; font-size: 1.6em; color: #1a1a2e; border-bottom: 3px solid #1a1a2e; padding-bottom: 12px; margin-bottom: 24px; }
+h2 { font-size: 1.3em; color: #fff; background: linear-gradient(135deg, #2c3e7a, #4a6fa5); padding: 10px 18px; border-radius: 8px; margin: 28px 0 16px; }
+h3 { font-size: 1.1em; color: #2c3e7a; border-left: 4px solid #2c3e7a; padding-left: 12px; margin: 20px 0 10px; }
+h4 { font-size: 1em; color: #444; margin: 14px 0 8px; }
+p, li { font-size: 0.95em; }
+ul, ol { padding-left: 24px; margin: 8px 0; }
+li { margin: 4px 0; }
+
+
+/* 蓝色记忆框 - 口诀/速记 */
+.memory-box {
+background: #e8f0fe;
+border: 2px solid #4285f4;
+border-radius: 10px;
+padding: 14px 18px;
+margin: 14px 0;
+position: relative;
+}
+.memory-box::before {
+content: "📘 速记口诀";
+position: absolute;
+top: -12px; left: 16px;
+background: #4285f4;
+color: #fff;
+font-size: 0.8em;
+font-weight: bold;
+padding: 2px 12px;
+border-radius: 10px;
+}
+.memory-box .blue { color: #1a56db; font-weight: bold; font-size: 1.05em; }
+
+/* 橙色考点框 */
+.exam-point {
+background: #fff3e0;
+border: 2px solid #fb8c00;
+border-radius: 10px;
+padding: 14px 18px;
+margin: 14px 0;
+position: relative;
+}
+.exam-point::before {
+content: "🔥 重要考点";
+position: absolute;
+top: -12px; left: 16px;
+background: #fb8c00;
+color: #fff;
+font-size: 0.8em;
+font-weight: bold;
+padding: 2px 12px;
+border-radius: 10px;
+}
+.exam-point .orange { color: #e65100; font-weight: bold; }
+
+/* 粉色易错框 */
+.warning-box {
+background: #fce4ec;
+border: 2px solid #e91e63;
+border-radius: 10px;
+padding: 14px 18px;
+margin: 14px 0;
+position: relative;
+}
+.warning-box::before {
+content: "⚠️ 易错提醒";
+position: absolute;
+top: -12px; left: 16px;
+background: #e91e63;
+color: #fff;
+font-size: 0.8em;
+font-weight: bold;
+padding: 2px 12px;
+border-radius: 10px;
+}
+
+/* 答案模板框 */
+.answer-box {
+background: #f1f8e9;
+border: 2px solid #66bb6a;
+border-radius: 10px;
+padding: 14px 18px;
+margin: 14px 0;
+position: relative;
+}
+.answer-box::before {
+content: "✅ 核心总结/答案";
+position: absolute;
+top: -12px; left: 16px;
+background: #66bb6a;
+color: #fff;
+font-size: 0.8em;
+font-weight: bold;
+padding: 2px 12px;
+border-radius: 10px;
+}
+
+/* 案例背景 */
+.case-bg {
+background: #fafafa;
+border: 1px solid #ddd;
+border-radius: 8px;
+padding: 14px 18px;
+margin: 10px 0;
+font-size: 0.9em;
+color: #555;
+}
+
+/* 做题策略 */
+.strategy {
+background: #ede7f6;
+border: 2px solid #7e57c2;
+border-radius: 10px;
+padding: 14px 18px;
+margin: 14px 0;
+position: relative;
+}
+.strategy::before {
+content: "💡 做题策略";
+position: absolute;
+top: -12px; left: 16px;
+background: #7e57c2;
+color: #fff;
+font-size: 0.8em;
+font-weight: bold;
+padding: 2px 12px;
+border-radius: 10px;
+}
+
+/* 真题/模拟题框 */
+.question-box {
+background: #f3f8ff;
+border: 2px solid #5c6bc0;
+border-radius: 10px;
+padding: 14px 18px;
+margin: 14px 0;
+position: relative;
+}
+.question-box::before {
+content: "📝 真题/模拟题";
+position: absolute;
+top: -12px; left: 16px;
+background: #5c6bc0;
+color: #fff;
+font-size: 0.8em;
+font-weight: bold;
+padding: 2px 12px;
+border-radius: 10px;
+}
+.question-box .answer { color: #1b5e20; font-weight: bold; margin-top: 6px; }
+.question-box .tip { color: #e65100; font-weight: bold; font-size: 0.9em; }
+
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.9em; }
+th { background: #2c3e7a; color: #fff; padding: 10px; text-align: center; }
+td { border: 1px solid #ccc; padding: 8px 10px; vertical-align: top; }
+tr:nth-child(even) { background: #f9f9f9; }
+.tag { display: inline-block; background: #e3f2fd; color: #1565c0; border-radius: 4px; padding: 1px 8px; font-size: 0.85em; margin: 2px; }
+.section-divider { border: none; border-top: 2px dashed #ccc; margin: 30px 0; }
+.subtitle { text-align: center; color: #888; font-size: 0.9em; margin-bottom: 20px; }
+</style>
+
+</head>
+<body>
+
+<h1>社会工作法规与政策 · 第九章学习笔记</h1>
+<p class="subtitle">应急管理的法规与政策</p>
+
+<!-- ==================== 章节导览 ==================== -->
+
+<h2>一、章节导览与通关解密</h2>
+
+<div class="exam-point">
+<p><span class="orange">本章分值预测：5-7分左右。</span></p>
+<p>本章为全新章节，两版教材的侧重不同，社会社版更加详细。考核预计不难，但各个内容都容易涉及考点，需要对全章节有个系统理解，记忆量大，平常心对待。</p>
+<h4>本章核心内容结构：</h4>
+<ul>
+<li><strong>第一节：</strong>应急管理法规与政策的主要构成</li>
+<li><strong>第二节：</strong>应急管理法规与政策的有关要求</li>
+</ul>
+<h4>三个核心政策文件：</h4>
+<ul>
+<li>《突发事件应对法》（2024年修订）</li>
+<li>《突发事件应急预案管理办法》（2024年修订）</li>
+<li>《国家突发事件总体应急预案》（2025年新版）</li>
+</ul>
+<h4>全流程覆盖：</h4>
+<p>立法修订 → 制度框架 → 应急准备 → 监测预警 → 处置救援 → 恢复重建 → 法律责任 → 预案管理 → 国家预案</p>
+</div>
+
+<hr class="section-divider">
+
+<!-- ==================== 第一节 ==================== -->
+
+<h2>二、第一节 应急管理法规与政策的主要构成</h2>
+
+<h3>1. 突发事件与应急管理的定义</h3>
+
+<h4>1.1 突发事件</h4>
+
+<div class="exam-point">
+<p><strong>①定义：</strong>突然发生，造成或可能造成严重社会危害，需要采取应急处置措施予以应对的<span class="orange">自然灾害、事故灾难、公共卫生事件和社会安全事件</span>。</p>
+</div>
+
+<p><strong>②四个基本特征：</strong></p>
+<ul>
+<li>突发性或公共性</li>
+<li>突发性和紧迫性</li>
+<li>危害性和破坏性</li>
+<li>必须以权力组织应对</li>
+</ul>
+
+<p><strong>③四类分级：</strong></p>
+<p>按社会危害程度、影响范围等因素，分为<span class="tag">特别重大</span>、<span class="tag">重大</span>、<span class="tag">较大</span>和<span class="tag">一般</span>四级。</p>
+
+<h4>1.2 应急管理</h4>
+
+<div class="exam-point">
+<p><strong>原则：</strong><span class="orange">"预防为主、预防与应急相结合"</span></p>
+<p><strong>①管理体系：</strong>在党委领导、政府负责、社会协同、公众参与、法治保障的框架下，以政府作为管理主体，全社会共同参与。</p>
+<p><strong>管理体制：</strong></p>
+<ul>
+<li>统一领导、专常兼备、反应灵敏、上下联动</li>
+<li>综合协调、分类管理、分级负责、属地管理为主</li>
+</ul>
+</div>
+
+<p><strong>②五个核心特征：</strong></p>
+<table>
+<tr><th>特征</th><th>内容</th></tr>
+<tr><td><strong>公共性</strong></td><td>应急管理的主体、对象和过程都在公共治理框架内</td></tr>
+<tr><td><strong>系统性</strong></td><td>目标、对象、流程由多个要素汇聚、相互作用形成体系</td></tr>
+<tr><td><strong>前瞻性</strong></td><td>掌握突发事件规律，开展预警和预防，提前组织干预</td></tr>
+<tr><td><strong>专业性</strong></td><td>由专业人员、知识、技术应对不同领域的突发事件</td></tr>
+<tr><td><strong>常态性</strong></td><td>不仅包含应急状态下的处置，也涵盖常态下的预防、减灾、备灾等工作</td></tr>
+</table>
+
+<div class="memory-box">
+<p>速记口诀：<span class="blue">「公系前专常」——公共性、系统性、前瞻性、专业性、常态性</span></p>
+</div>
+
+<h3>2. 应急管理的目的——五个目的</h3>
+
+<div class="exam-point">
+<ol>
+<li><strong>保护人民生命财产安全</strong>——以人民为中心是根本宗旨，最大程度保护人民生命财产安全。<span class="tag">【人安】</span></li>
+<li><strong>维护国家安全、公共安全、生态环境安全和社会秩序</strong>——外在目标是安全，内在要求是结果导向；从公共性来看，外在目标是公平，内在要求是过程导向。<span class="tag">【国安】</span></li>
+<li><strong>预防和减少突发事件的发生，控制、减轻和消除突发事件引起的严重社会危害</strong>——坚持预防为主、源头治理，通过事前、事中、事后的连续性管理，实现预防与应急相结合。<span class="tag">【预防控制】</span></li>
+<li><strong>提高突发事件预防和应对能力</strong>——通过预防与准备、监测与预警、处置与救援、恢复与重建、调查评估与总结改进等环节，防范重大风险，提升应急能力。<span class="tag">【提能力】</span></li>
+<li><strong>规范突发事件应对活动</strong>——防止发生次生或衍生灾害。<span class="tag">【规范应对】</span></li>
+</ol>
+<p><span class="orange">核心目的：保护人民生命财产安全、维护国家安全与社会秩序</span></p>
+</div>
+
+<div class="memory-box">
+<p>速记口诀：<span class="blue">「人安、国安、预防控制、提能力、规范应对」</span></p>
+</div>
+
+<h3>3. 应急管理的功能——五大功能</h3>
+
+<table>
+<tr><th>功能</th><th>说明</th></tr>
+<tr><td><strong>1. 保护人民群众生命财产安全</strong></td><td>核心功能</td></tr>
+<tr><td><strong>2. 推进国家治理体系和治理能力建设</strong></td><td>推进国家治理</td></tr>
+<tr><td><strong>3. 提升安全服务水平高质量发展</strong></td><td>将安全贯穿经济社会发展各方面</td></tr>
+<tr><td><strong>4. 防范重大安全风险和及时处置各类灾害事故</strong></td><td>不断提升防范和处置能力</td></tr>
+<tr><td><strong>5. 维护社会稳定</strong></td><td>筑牢防灾减灾的人民防线</td></tr>
+</table>
+
+<div class="memory-box">
+<p>速记口诀：<span class="blue">「保护生命财产安全、推进国家治理、提升安全服务、防范风险与处置灾害、维护社会稳定」</span></p>
+</div>
+
+<h3>4. 应急管理的法规政策体系</h3>
+
+<div class="exam-point">
+<p><strong>1.</strong> 2019年党的十九届四中全会明确提出——<span class="orange">"构建统一指挥、专常兼备、反应灵敏、上下联动的应急管理体制，优化国家应急管理能力体系建设，提高防灾减灾救灾能力"</span>。</p>
+<p><strong>2.</strong> 形成<span class="orange">"1+4"的应急预案体系</span>："1"指国家突发事件总体应急预案；"4"指覆盖自然灾害、事故灾难、公共卫生事件、社会安全事件4类突发事件的专项应急预案。</p>
+</div>
+
+<!-- 模拟题区域 -->
+<div class="question-box">
+<p><strong>【模拟】</strong>某社区在台风来临前组织居民开展应急避险演练，并储备救灾物资。此行为体现了应急管理的（ ）特征。</p>
+<p>A. 公共性</p>
+<p>B. 系统性</p>
+<p>C. 前瞻性</p>
+<p>D. 专业性</p>
+<p class="answer">【答案】C</p>
+<p class="tip">解题关键：预防——前瞻</p>
+</div>
+
+<div class="question-box">
+<p><strong>【模拟】</strong>某县遭遇暴雨导致部分村庄被淹，当地政府立即组织转移群众并发放救灾物资。此行为体现了应急管理的（ ）核心目的。</p>
+<p>A. 保护人民生命财产安全</p>
+<p>B. 维护国家安全与社会秩序</p>
+<p>C. 提高突发事件应对能力</p>
+<p>D. 规范突发事件应对活动</p>
+<p class="answer">【答案】A</p>
+<p class="tip">解题关键：人核心</p>
+</div>
+
+<div class="question-box">
+<p><strong>【模拟】</strong>我国应急管理的核心功能是（ ）</p>
+<p>A. 保护人民群众生命财产安全</p>
+<p>B. 推进国家治理体系和治理能力建设</p>
+<p>C. 提升安全服务水平高质量发展</p>
+<p>D. 防范重大安全风险和处置灾害事故</p>
+<p class="answer">【答案】A</p>
+<p class="tip">解题关键：人核心</p>
+</div>
+
+<div class="question-box">
+<p><strong>【模拟】</strong>我国应急管理的"1+4"应急预案体系中，"4"指的是（ ）</p>
+<p>A. 自然灾害、事故灾难、公共卫生事件、社会安全事件四类专项预案</p>
+<p>B. 预防、预警、处置、恢复四类工作环节</p>
+<p>C. 国家、省、市、县四级应急预案</p>
+<p>D. 党委、政府、社会、公众四类参与主体</p>
+<p class="answer">【答案】A</p>
+<p class="tip">解题关键：四类专项</p>
+</div>
+
+<div class="question-box">
+<p><strong>【模拟】</strong>应急管理的公共性特征主要体现在（ ）</p>
+<p>A. 应急管理的主体、对象和过程均在公共治理框架内</p>
+<p>B. 应急管理需要专业人员和技术支撑</p>
+<p>C. 应急管理涵盖常态与非常态的全周期工作</p>
+<p>D. 应急管理的目标是防范重大安全风险</p>
+<p class="answer">【答案】A</p>
+<p class="tip">解题关键：找关键词</p>
+</div>
+
+<div class="question-box">
+<p><strong>【模拟】</strong>2019年党的十九届四中全会对我国应急管理体制提出的明确要求是（ ）</p>
+<p>A. 构建统一指挥、专常兼备、反应灵敏、上下联动的应急管理体制</p>
+<p>B. 建立全国统一的突发事件应急预案体系</p>
+<p>C. 完善以人民为中心的应急处置机制</p>
+<p>D. 强化跨部门应急资源统筹调配能力</p>
+<p class="answer">【答案】A</p>
+</div>
+
+<hr class="section-divider">
+
+<!-- ==================== 第二节 ==================== -->
+
+<h2>三、第二节 应急管理法规与政策的有关要求</h2>
+
+<h3>一、《突发事件应对法》（2024年修订）核心制度框架</h3>
+
+<h4>1. 管理与指挥体制</h4>
+
+<div class="exam-point">
+<p><strong>中央层面：</strong>国务院统一领导全国应急工作，设立国家突发事件应急指挥机构，必要时派出工作组。</p>
+<p><strong>县级以上层面：</strong>政府主要负责人、相关部门负责人、救援队伍及驻地部队负责人组成应急指挥机构，统一领导、协调本区域应对工作。<span class="tag">【县级以上——指导、领导、协调】</span></p>
+<p><strong>县级层面：</strong>对本区域突发事件应对<span class="orange">负总责</span>，事件发生后<span class="orange">立即处置</span>并向上一级政府报告，必要时可越级上报。<span class="tag">【县级—立即干】</span></p>
+<p><strong>乡级与街道层面：</strong>明确<span class="orange">专门工作力量</span>负责应急工作。<span class="tag">【乡镇街道—专门】</span></p>
+<p><strong>基层自治组织：</strong>村（居）委会<span class="orange">协助</span>政府开展工作，公民、法人有义务参与应对。<span class="tag">【基层组织—协助】</span></p>
+</div>
+
+<div class="memory-box">
+<p>速记口诀：<span class="blue">「中央统一领导，县级以上指导协调，县级负总责立即干，乡镇专门力量，基层协助」</span></p>
+</div>
+
+<h4>2. 县级及县级以上人民政府应对机制</h4>
+
+<div class="exam-point">
+<p><strong>①报告机制：</strong>突发事件发生后要<span class="orange">立即向上一级人民政府报告</span>，而且规定必要时可以越级上报。如果遇到不能消除或者不能有效控制的严重危害社会的事件应当及时向上级人民政府报告。具备条件的，可以网络直报或自动速报。<span class="tag">【报告上一级——县】</span></p>
+<p><strong>②跨区域应对：</strong>突发事件涉及<span class="orange">两个以上行政区域</span>的，其应对管理工作由有关行政区域<span class="orange">共同的上一级人民政府</span>负责，或者由各有关行政区域的<span class="orange">上一级人民政府共同负责</span>。<span class="tag">【报告—共同上一级、上一级共同】</span></p>
+<p><strong>③应急指挥机构：</strong>如果实际有需要，可以设立与突发事件类别有关的应急指挥机构。需要注意的是，突发事件应急指挥机构发布的决定、命令、措施仅限于<span class="orange">"突发事件应对过程中"</span>。</p>
+<p><strong>④人大监督：</strong>应急处置结束后，县级以上政府需向<span class="orange">本级人大常委会</span>作专项工作报告。<span class="tag">【县级以上—本级人大】</span></p>
+</div>
+
+<!-- 真题区域 -->
+<div class="question-box">
+<p><strong>【2022真题】</strong>甲市乙县是旅游热点地区，旅游旺季时突发泥石流，致使大量旅客滞留，根据《突发事件应对法》，（ ）应当立即采取措施控制事态发展。</p>
+<p>A. 甲市人民政府</p>
+<p>B. 甲市文旅部门</p>
+<p>C. 乙县人民政府</p>
+<p>D. 乙县文旅部门</p>
+<p class="answer">【答案】C</p>
+<p class="tip">解题关键：负责——县政府</p>
+</div>
+
+<div class="question-box">
+<p><strong>【2019真题】</strong>甲县乙镇某道路在建设施工过程中，突发煤气管道破裂、煤气泄漏，对周边群众人身及财产安全造成严重威胁。根据《突发事件应对法》，该突发事件当由（ ）负责。</p>
+<p>A. 甲县人民政府</p>
+<p>B. 甲县煤气公司</p>
+<p>C. 甲县消防部门</p>
+<p>D. 乙镇人民政府</p>
+<p class="answer">【答案】A</p>
+<p class="tip">解题关键：负责——县政府</p>
+</div>
+
+<div class="question-box">
+<p><strong>【2023真题】</strong>某地发生山洪灾害影响涉及甲省乙市下辖的丙县某镇和丁县某乡交界地区，根据《突发事件应对法》，这一突发事件的应对工作应该由（ ）人民政府负责。</p>
+<p>A. 甲省</p>
+<p>B. 乙市</p>
+<p>C. 丙县</p>
+<p>D. 丁县</p>
+<p class="answer">【答案】B</p>
+<p class="tip">解题关键：共同上一级</p>
+</div>
+
+<div class="question-box">
+<p><strong>【2018/2025真题】</strong>某危险品运输船只突发沉船事故，有危险品流入河道内。事发地点属甲市乙县辖区，事发后甲市乙县立即采取应急处置措施。然而，被污染水域已扩大到下游本省丙市丁县。根据《突发事件应对法》，该突发事件应对工作应当由（ ）。</p>
+<p>A. 乙县负责，丁县配合</p>
+<p>B. 乙县和丁县共同负责</p>
+<p>C. 甲市负责，丙市配合</p>
+<p>D. 甲市和丙市共同负责</p>
+<p class="answer">【答案】D</p>
+<p class="tip">解题关键：上一级共同</p>
+</div>
+
+<div class="question-box">
+<p><strong>【2021真题】</strong>甲省气象台监测到近期本省将出现极端天气，其中甲省辖区内的乙市有可能发生自然灾害，引发突发事件，遂及时通知乙市气象局，并向甲省人民政府报告。根据《突发事件应对法》，可以向乙市发布突发事件预警的有（ ）。</p>
+<p>A. 甲省气象台</p>
+<p>B. 乙市气象站</p>
+<p>C. 甲省人民政府</p>
+<p>D. 乙市人民政府</p>
+<p>E. 乙市应急管理部</p>
+<p class="answer">【答案】CD</p>
+<p class="tip">解题关键：预警发布主体——县级以上地方人民政府</p>
+</div>
+
+<hr class="section-divider">
+
+<h3>二、突发事件应对过程全阶段要求</h3>
+
+<h4>1. 预防与准备阶段</h4>
+
+<p><strong>（1）应急预案体系</strong></p>
+<ul>
+<li>国务院制定国家总体预案与专项预案，各部门、地方政府制定对应预案，形成<span class="tag">"国家 - 地方 - 基层"三级体系</span>。</li>
+<li>预案需根据实际情况<span class="tag">动态修订</span>，应急管理部门负责衔接与指导。</li>
+</ul>
+
+<div class="memory-box">
+<p>速记口诀：<span class="blue">「国家 - 地方 - 基层三级预案，动态修订」</span></p>
+</div>
+
+<p><strong>（2）风险防控与基础设施</strong></p>
+<ul>
+<li><span class="tag">县级以上</span>政府将应急工作纳入国民经济规划，统筹建设应急避难场所、医疗救治点等设施。<span class="tag">【基础设施—县+政府】</span></li>
+<li>所有单位需建立安全管理制度，定期开展隐患排查与风险评估。</li>
+</ul>
+
+<p><strong>（3）加强风险评估体系和危险源、危险区域的管控</strong></p>
+
+<div class="exam-point">
+<p><strong>县级人民政府：</strong>对本行政区域内<span class="orange">一般、较大</span>突发事件的危险源、危险区域进行调查、登记、风险评估，定期检查、监控，责令有关单位采取安全防范措施。<span class="tag">【一般、较大——调查登记评估】</span></p>
+<p><strong>县级以上地方人民政府：</strong>根据情况变化，及时调整危险源、危险区域的登记。<span class="tag">【县+政府——确定、调整区域】</span></p>
+<p><strong>省级和设区的市级人民政府：</strong>对本行政区域内容易引发<span class="orange">特别重大、重大</span>突发事件的危险源、危险区域进行调查、登记、风险评估，组织检查、监控，责令采取安全防范措施。<span class="tag">【重大、特大——市级省级——调查登记评估】</span></p>
+<p><strong>所有单位：</strong>建立健全安全管理制度，定期开展危险源辨识评估。</p>
+<p>危险源、危险区域及其基础信息——接入突发事件信息系统，登记、管控、及时公布。</p>
+</div>
+
+<div class="memory-box">
+<p>速记口诀：<span class="blue">「一般较大归县级，重大特大归市省级」</span></p>
+</div>
+
+<p><strong>（4）应急队伍与保障</strong></p>
+
+<p><strong>①培训制度</strong></p>
+<p><span class="tag">县级以上人民政府</span>——建立健全突发事件应对管理培训制度，对负有突发事件应对管理职责的工作人员以及居民委员会、村民委员会有关人员定期进行培训。</p>
+
+<p><strong>②协同</strong></p>
+<ul>
+<li><strong>国家综合性消防救援队伍</strong>——综合性<span class="tag">常备骨干力量</span></li>
+<li><strong>县级以上人民政府及其有关部门</strong>——可以建立由<span class="tag">成年志愿者</span>组成的应急救援队伍</li>
+<li><strong>乡级人民政府、街道办事处和有条件的居民委员会、村民委员会</strong>——可以建立<span class="tag">基层应急救援队伍</span></li>
+<li><strong>单位</strong>——应当建立由本单位职工组成的<span class="tag">专职或兼职</span>应急救援队伍</li>
+<li>专业应急救援人员应取得国家规定的应急救援职业资格。</li>
+</ul>
+
+<p><strong>③夯实应急救援的社会力量</strong></p>
+<ul>
+<li>加强社会公众的应急知识宣传和必要的应急演练；</li>
+<li>教育主管部门应当对学校开展应急教育进行指导和监督，各级各类学校要对学生及教职工开展应急知识教育和应急演练；</li>
+<li>鼓励公民、法人和其他组织储备基本的应急自救物资和生活必需品；</li>
+<li>鼓励社会力量参与突发事件应急运输保障；</li>
+<li>鼓励为突发事件应对工作提供物资、资金、技术支持和捐赠。</li>
+</ul>
+
+<hr class="section-divider">
+
+<h4>2. 监测与预警</h4>
+
+<p><strong>（1）建立全国统一的信息系统</strong></p>
+<ul>
+<li>县级以上人民政府有关主管部门应当向本级人民政府相关部门、上级人民政府主管部门<span class="tag">通报</span>突发事件信息。</li>
+<li>专业机构、监测网点和信息报告员应当及时向所在地人民政府及其主管部门<span class="tag">报告</span>突发事件信息。</li>
+<li>县级以上地方人民政府应当及时汇总分析突发事件隐患和监测信息，必要时组织会商，进行突发事件影响评估。<span class="tag">【评估——县+政府】</span></li>
+<li>评估结果认为可能发生重大或特别重大突发事件的，县级以上地方人民政府应当<span class="tag">立即向上级人民政府报告</span>，并向毗邻或相关地区的人民政府通报，及时采取预防措施。<span class="tag">【重特大——县+政府报上级政府】</span></li>
+</ul>
+
+<p><strong>（2）建立预警制度</strong></p>
+
+<div class="exam-point">
+<p><strong>①预警制度与预警范围、分级</strong></p>
+<ul>
+<li><strong>范围：</strong>主要包括<span class="orange">自然灾害、事故灾难、公共卫生事件</span></li>
+<li><strong>危害程度：</strong>一级（<span class="orange">红</span>）、二级（<span class="orange">橙</span>）、三级（<span class="orange">黄</span>）、四级（<span class="orange">蓝</span>）</li>
+<li><strong>划分标准制定：</strong>国务院或国务院确定的部门</li>
+</ul>
+<p><strong>②发布前提：</strong>事件即将发生或者发生的可能性增大</p>
+<p><strong>③发布主体：</strong><span class="orange">县级以上地方人民政府</span></p>
+</div>
+
+<div class="warning-box">
+<p>注意区分：<strong>预警级别</strong>分为一级、二级、三级、四级（红橙黄蓝）；<strong>突发事件等级</strong>分为特别重大、重大、较大、一般。两者不要混淆！</p>
+</div>
+
+<p><strong>④程序</strong></p>
+<p>发布相应级别的警报 → 决定并宣布相关地区进入预警期，同时向上一级人民政府报告，必要时可以越级上报，同时向当地驻军和可能受到危害的毗邻或相关地区的人民政府通报。具备条件的，应当进行网络直报或者自动速报。</p>
+
+<p><strong>⑤不同级别警报的应对措施</strong></p>
+
+<table>
+<tr><th>一、二级需采取的措施</th><th>三、四级需采取的措施</th></tr>
+<tr>
+<td>
+(1) 责令进入待命状态，并动员准备<br>
+(2) 调集物资、设备、工具，准备设施、场所<br>
+(3) 重点单位、重要部位和重要基础设施的安全保卫<br>
+(4) 采取必要措施，确保公共设施的安全和正常运行<br>
+(5) 及时发布避免或减轻危害的建议、劝告<br>
+(6) 转移、疏散或撤离易受突发事件危害的人员并予以妥善安置，转移重要财产<br>
+(7) 关闭或限制使用易受突发事件危害的场所，控制或限制容易导致危害扩大的公共场所的活动
+</td>
+<td>
+(1) 启动应急预案<br>
+(2) 责令及时收集、报告有关信息，向社会公布，加强监测、预报和预警工作<br>
+(3) 随时对突发事件信息进行分析评估<br>
+(4) 定时向社会发布评估结果<br>
+(5) 及时发布可能受到突发事件危害的警告，宣传避免、减轻危害的常识，公布联络方式和渠道
+</td>
+</tr>
+</table>
+
+<div class="memory-box">
+<p>速记口诀：<span class="blue">「一、二级预警需紧急疏散、管控风险；三、四级预警需启动预案、发布警示」</span></p>
+</div>
+
+<p><strong>⑥预警发布后的保障措施</strong></p>
+<p>市场监测和保障供应——对重要商品和服务市场情况加强监测；根据实际需要及时保障供应、稳定市场。</p>
+
+<p><strong>⑦预警级别调整和解除</strong></p>
+<p>有事实证明不可能发生突发事件或者危险已经解除的，发布警报的人民政府应当<span class="tag">立即宣布解除警报</span>，终止预警期，并解除已经采取的有关措施。</p>
+
+<!-- 监测预警相关真题 -->
+<div class="question-box">
+<p><strong>【2021真题】</strong>根据《突发事件应对法》，关于突发事件等级划分的说法，正确的是（ ）。</p>
+<p>A. 自然灾害可分为红色、橙色、黄色、蓝色四个级别</p>
+<p>B. 事故灾难可分为一级、二级、三级、四级四个级别</p>
+<p>C. 公共卫生事件可分为特别重大、重大、较大和一般四个级别</p>
+<p>D. 社会安全事件可分为一级、二级、三级、四级四个级别</p>
+<p class="answer">【答案】C</p>
+<p class="tip">解题关键：预警级别1234，事件等级一大大大</p>
+</div>
+
+<div class="question-box">
+<p><strong>【2024真题】</strong>根据《突发事件应对法》，突发事件应对工作实行的原则是（ ）。</p>
+<p>A. 预防为主，预防与应急相结合</p>
+<p>B. 应对为主，预防与应急相结合</p>
+<p>C. 韧性为本，应急与恢复相结合</p>
+<p>D. 防抗结合，防范与应对相结合</p>
+<p class="answer">【答案】A</p>
+</div>
+
+<div class="question-box">
+<p><strong>【模拟】</strong>某社区接到暴雨红色预警后，应当立即采取的措施是（ ）。</p>
+<p>A. 发布警示信息，提醒居民减少外出</p>
+<p>B. 组织居民紧急疏散至避难场所</p>
+<p>C. 对辖区内危险源进行排查</p>
+<p>D. 启动社区应急志愿者队伍</p>
+<p class="answer">【答案】B</p>
+<p class="tip">解题关键：红色——一级——紧急疏散</p>
+</div>
+
+<hr class="section-divider">
+
+<h4>3. 应急处置与救援</h4>
+
+<p><strong>（1）应急响应级别的划分、划分标准和确定</strong></p>
+<div class="exam-point">
+<ul>
+<li><strong>级别：</strong>一级、二级、三级、四级。<span class="orange">一级为最高级别</span>。</li>
+<li><strong>制定级别划分标准：</strong>国务院或者国务院确定的部门</li>
+<li><strong>确定应急响应级别：</strong>县级以上人民政府及其有关部门</li>
+</ul>
+</div>
+
+<p><strong>（2）应急响应的领导职责、组织处置和协调</strong></p>
+
+<div class="exam-point">
+<p><strong>①启动应急响应并采取处置措施的主体</strong>——<span class="orange">人民政府</span>——包括国务院在内的县级以上的人民政府。</p>
+<p><strong>②处置措施：</strong></p>
+<ul>
+<li><span class="orange">自然灾害 / 事故灾难 / 公共卫生事件：</span>营救人员、疏散安置、医疗救治、管控风险、保障生活</li>
+<li><span class="orange">社会安全事件：</span>强制隔离、管制现场、保卫重点单位</li>
+</ul>
+<p><strong>③报告制度和协调机制：</strong></p>
+<ul>
+<li>启动应急响应需要向上级人民政府报告，并建立协调机制。</li>
+<li>在必要时，可以设立<span class="tag">现场指挥部</span>负责现场应急处置与救援，做统一指挥。</li>
+<li>引导社会力量及时有序参与应急处置与救援工作。</li>
+</ul>
+</div>
+
+<p><strong>（3）应急征用、特殊群体帮扶与社会力量参与</strong></p>
+<ul>
+<li>必要时可以向有关单位和个人<span class="tag">征用</span>应急救援所需设备、设施、场地、交通工具和其他物资，并在运送方面有<span class="tag">优先性</span>。</li>
+<li>应当为受突发事件影响无人照料的<span class="tag">无民事行为能力人、限制民事行为能力人</span>提供及时有效帮助。</li>
+</ul>
+
+<p><strong>调动社会力量参与应急处置与救援：</strong></p>
+<ul>
+<li><strong>①个人义务：</strong>服从指挥与安排，配合采取应急处置措施，积极参与应急救援工作，协作维护社会秩序。</li>
+<li><strong>②城乡社区组织义务：</strong>加强与突发事件信息系统数据共享，增强保障群众基本生活和服务群众的能力。</li>
+<li><strong>③心理服务、社会工作与人才队伍建设：</strong>支持引导心理健康服务人员和社会工作者对受突发事件影响的各类人群开展<span class="tag">心理援助</span>工作。</li>
+</ul>
+
+<p><strong>（4）个人信息与个人尊严保护</strong></p>
+<div class="exam-point">
+<p><strong>①个人信息提供义务与个人信息严格保密原则：</strong>县级以上人民政府及其有关部门对获取的相关信息，应当<span class="orange">严格保密</span>，并依法保护公民的通信自由和通信秘密。</p>
+<p><strong>②信息安全保护和信息获得的合法性：</strong></p>
+<ul>
+<li>不得非法收集、使用、加工、传输他人的个人信息，不得非法买卖、提供或者公开他人的个人信息。</li>
+<li>只能用于突发事件应对，并在突发事件应对工作结束后予以<span class="orange">销毁</span>。</li>
+</ul>
+</div>
+
+<!-- 应急处置真题 -->
+<div class="question-box">
+<p><strong>【2016真题】</strong>某足球联赛决赛后，双方球迷发生恶性群殴事件，致使数名球迷受伤，近万名观众滞留现场，所在区人民政府及有关部门获悉后立即着手采取应急处置措施。根据《突发事件应对法》，公安机关应采取的应急处置措施是（ ）。</p>
+<p>A. 保障食品、饮用水等基本生活必需品的供应</p>
+<p>B. 从严惩处哄抢财物、干扰破坏应急处置工作的行为</p>
+<p>C. 强制隔离以暴力行为参与冲突的当事人，妥善解决现场纠纷和争端</p>
+<p>D. 组织公民参加应急救援和处置工作，要求具有特定专长的人员提供服务</p>
+<p class="answer">【答案】C</p>
+<p class="tip">解题关键：社会安全事件——强制隔离、管制现场</p>
+</div>
+
+<div class="question-box">
+<p><strong>【模拟】</strong>根据《突发事件应对法》，居民委员会、村民委员会在突发事件应对中应当（ ）。</p>
+<p>A. 独立开展应急处置工作</p>
+<p>B. 依法协助政府及有关部门做好应对工作</p>
+<p>C. 负责组织志愿者队伍</p>
+<p>D. 制定应急预案</p>
+<p class="answer">【答案】B</p>
+<p class="tip">解题关键：基层组织——协助</p>
+</div>
+
+<hr class="section-divider">
+
+<h4>4. 事后恢复与重建</h4>
+
+<p><strong>（1）解除和恢复</strong></p>
+<p>履行统一领导职责或者组织处置突发事件的人民政府：</p>
+<ol>
+<li><span class="tag">宣布解除应急响应</span>，停止已采取的应急处置措施</li>
+<li>采取或继续采取实施必要的措施，防止自然灾害、事故灾难、公共卫生事件的<span class="tag">次生、衍生事件</span>或者重新引发社会安全事件</li>
+<li>立即组织<span class="tag">调查评估</span>，制定恢复重建计划，并向上一级人民政府报告。</li>
+</ol>
+
+<p><strong>（2）恢复与重建的政策支持</strong></p>
+<ul>
+<li><strong>①寻求上一级系统支持：</strong>需要上一级人民政府支持的，可以向上一级人民政府提出请求。</li>
+<li><strong>②制定和落实优惠与补助政策：</strong>
+<ul>
+<li><strong>志愿者、公民</strong>——参加应急救援工作或者协助维护社会秩序期间，其所在单位应当保证其<span class="tag">工资待遇和福利不变</span>，并可以按照规定给予相应补助。</li>
+<li><strong>受伤人员</strong>——县级以上人民政府对在应急救援工作中伤亡的人员依法落实<span class="tag">工伤待遇、抚恤</span>或者其他保障政策，并组织做好应急救援工作中致病人员的医疗救治工作。</li>
+</ul>
+</li>
+<li><strong>③制定善后工作计划，解决矛盾纠纷</strong></li>
+<li><strong>④总结经验教训，加强审计与档案移交：</strong>
+<ul>
+<li>查明经过和原因，总结处置工作的经验教训，制定改进措施，并向上一级人民政府提出报告。</li>
+<li>有关资金、物资的筹集、管理、分配、拨付和使用等情况，应当依法接受<span class="tag">审计机关</span>的审计监督。</li>
+<li>突发事件应对工作中形成的材料，应当按照国家规定<span class="tag">归档</span>，并向相关档案馆移交。</li>
+</ul>
+</li>
+</ul>
+
+<!-- 事后恢复真题 -->
+<div class="question-box">
+<p><strong>【2024真题】</strong>某地发生里氏7.0级强烈地震，当地政府第一时间启动应急预案，同时邀请某专业民间救援队参与救援，某公司员工刘某为该救援队志愿者，随该救援队参加应急救援工作。根据《突发事件应对法》，关于刘某参加应急救援工作期间在本单位的工资和福利的说法正确的是（ ）。</p>
+<p>A. 仅享受基本工资待遇</p>
+<p>B. 工资待遇和福利不变</p>
+<p>C. 享受基本工资待遇、福利不变</p>
+<p>D. 额外增发加班费和专项福利</p>
+<p class="answer">【答案】B</p>
+<p class="tip">解题关键：应急救援算上班</p>
+</div>
+
+<div class="question-box">
+<p><strong>【模拟】</strong>根据《突发事件应对法》，应急处置工作结束后，负责处置的人民政府应当向（ ）作专项工作报告。</p>
+<p>A. 上一级人民政府</p>
+<p>B. 本级人民代表大会常务委员会</p>
+<p>C. 应急管理部</p>
+<p>D. 国务院</p>
+<p class="answer">【答案】B</p>
+<p class="tip">解题关键：报告——本级人大</p>
+</div>
+
+<div class="question-box">
+<p><strong>【模拟】</strong>某县应急管理部门在救灾款物管理中，发现工作人员挪用救灾资金5万元，根据《自然灾害救助条例》，该行为应当由（ ）给予行政处分。</p>
+<p>A. 县人民政府</p>
+<p>B. 县应急管理部门</p>
+<p>C. 县监察机关</p>
+<p>D. 县审计机关</p>
+<p class="answer">【答案】C</p>
+<p class="tip">解题关键：监察处分</p>
+</div>
+
+<hr class="section-divider">
+
+<h3>三、《突发事件应急预案管理办法》</h3>
+
+<h4>1. 管理体制</h4>
+<p>国务院统一领导，县级以上地方政府负责本区域预案管理，应急管理部门综合协调。</p>
+
+<h4>2. 应急预案分类与内容</h4>
+
+<p><strong>（1）分类</strong></p>
+<ul>
+<li><strong>政府及部门应急预案：</strong>总体预案、专项预案、部门预案。</li>
+<li><strong>单位和基层组织应急预案：</strong>企业、村（居）委会、社会组织等预案。</li>
+</ul>
+
+<p><strong>（2）核心内容</strong></p>
+
+<div class="exam-point">
+<p><strong>①总体预案：</strong>应对突发事件的总体制度安排，明确工作的总体要求、事件分类分级、预案体系构成、组织指挥体系与职责，以及风险防控、监测预警、处置救援、应急保障、恢复重建、预案管理等。</p>
+<p><strong>②专项应急预案：</strong>应对某一类型或某几种类型突发事件，或者重要专项工作而预先制定的涉及多个部门职责的方案。</p>
+<p><strong>③部门应急预案：</strong>应对本部门（行业、领域）突发事件，或针对涉及部门工作而预先制定的方案。</p>
+<p><strong>④基层预案：</strong>乡镇（街道）、村（社区）等基层组织的预案，突出<span class="orange">实用性与灵活性</span>。</p>
+</div>
+
+<div class="memory-box">
+<p>速记口诀：<span class="blue">「总体预案为制度安排，专项预案针对特定事件，部门预案按职责制定，基层预案突出实用性」</span></p>
+</div>
+
+<h4>3. 应急预案制修订工作计划</h4>
+<ul>
+<li><strong>国务院：</strong>应急管理部门会同有关部门编制应急预案制修订工作计划，并报<span class="tag">国务院批准</span>后实施。</li>
+<li><strong>本行政区域：</strong>县级以上地方人民政府应急管理部门应当会同有关部门，针对本行政区域多发易发突发事件、主要风险等，编制本行政区域应急预案制修订工作计划，报<span class="tag">本级人民政府批准</span>后实施，并抄送上一级人民政府应急管理部门。</li>
+<li><strong>本部门：</strong>县级以上人民政府有关部门可以结合实际制定本部门（行业、领域）应急预案编制计划，并抄送同级应急管理部门，同时抄送上一级相应部门。</li>
+</ul>
+
+<h4>4. 预案编制小组</h4>
+<p>应急预案编制部门、单位、有关部门和单位人员、有关专家、有应急处置工作经验的人员。</p>
+<p>小组组长——应急预案编制部门或单位有关负责人担任。</p>
+
+<h4>5. 预案的审批与发布</h4>
+
+<div class="exam-point">
+<p><strong>①国家层面：</strong></p>
+<ul>
+<li><span class="orange">国家总体预案：</span>党中央、国务院审批发布</li>
+<li><span class="orange">专项应急预案：</span>由预案编制牵头部门送应急管理部衔接协调后，报国务院审批</li>
+<li><span class="orange">部门应急预案：</span>由部门会议审议决定</li>
+</ul>
+<p><strong>②地方层面：</strong></p>
+<ul>
+<li><span class="orange">地方总体预案：</span>本级党委和政府审批发布</li>
+<li><span class="orange">专项应急预案：</span>送本级应急管理部门衔接协调，报本级人民政府审批</li>
+<li><span class="orange">部门应急预案：</span>按照本级人民政府和上级有关部门的应急预案管理规定执行</li>
+</ul>
+<p><strong>③其他：</strong></p>
+<ul>
+<li>重大活动保障应急预案、巨灾应急预案：由本级人民政府或其部门审批</li>
+<li>跨行政区域联合应急预案：由相关人民政府或其授权的部门协商确定审批</li>
+</ul>
+<p><strong>④单位 / 基层预案：</strong>本单位 / 组织负责人签发发布</p>
+</div>
+
+<div class="memory-box">
+<p>速记口诀：<span class="blue">「国家总体预案由党中央、国务院发布；地方预案由本级党委和政府发布」</span></p>
+</div>
+
+<h4>6. 预案的备案与演练</h4>
+
+<div class="exam-point">
+<ul>
+<li>预案发布后<span class="orange">20个工作日</span>内报送备案；</li>
+<li>专项预案、部门预案每<span class="orange">3年</span>至少演练1次；</li>
+<li>人员密集场所的经营单位或者管理单位等，应当有针对性地组织开展应急预案演练。</li>
+</ul>
+</div>
+
+<h4>7. 预案的评估与修订</h4>
+<p><strong>评估：</strong>应急预案编制单位应当建立应急预案<span class="tag">定期评估制度</span>。</p>
+<p><strong>及时修订预案的情形：</strong></p>
+<ul>
+<li>有关法律法规、规章、标准发生重大变化；</li>
+<li>应急指挥机构及其职责发生重大调整；</li>
+<li>面临的风险发生重大变化；</li>
+<li>重要应急资源发生重大变化；</li>
+<li>在突发事件实际应对和应急演练中发现问题需要作出重大调整。</li>
+</ul>
+
+<!-- 预案管理相关真题 -->
+<div class="question-box">
+<p><strong>【模拟】</strong>某街道应急管理办公室在组织应急演练时，应当重点演练（ ）。</p>
+<p>A. 预案的可行性和可操作性</p>
+<p>B. 应急队伍的协同配合能力</p>
+<p>C. 物资储备的调配效率</p>
+<p>D. 信息报告的及时性</p>
+<p class="answer">【答案】A</p>
+<p class="tip">解题关键：基层预案——突出实用性与灵活性</p>
+</div>
+
+<div class="question-box">
+<p><strong>【模拟】</strong>根据《突发事件应急预案管理办法》，应急预案发布后，应当在（ ）个工作日内报送备案。</p>
+<p>A. 10</p>
+<p>B. 15</p>
+<p>C. 20</p>
+<p>D. 30</p>
+<p class="answer">【答案】C</p>
+<p class="tip">解题关键：备20</p>
+</div>
+
+<div class="question-box">
+<p><strong>【模拟】</strong>根据《突发事件应急预案管理办法》，专项应急预案应当至少每（ ）年演练一次。</p>
+<p>A. 1</p>
+<p>B. 2</p>
+<p>C. 3</p>
+<p>D. 5</p>
+<p class="answer">【答案】C</p>
+<p class="tip">解题关键：3年一次</p>
+</div>
+
+<hr class="section-divider">
+
+<!-- ==================== 本章总结 ==================== -->
+
+<h2>四、本章总结</h2>
+
+<div class="answer-box">
+<h4>突发事件基本框架</h4>
+<p>突发事件：4类（自然灾害、事故灾难、公共卫生事件、社会安全事件），4级（特别重大、重大、较大、一般）</p>
+</div>
+
+<div class="answer-box">
+<h4>管理与指挥体制</h4>
+<ul>
+<li><strong>中央层面：</strong>国务院统一领导，设立国家突发事件应急指挥机构</li>
+<li><strong>县级以上层面：</strong>政府主要负责人牵头，组成应急指挥机构</li>
+<li><strong>县级层面：</strong>本区域应对工作负总责，事件发生后立即处置并上报，必要时可越级上报</li>
+<li><strong>乡级与街道：</strong>明确专门工作力量；村（居）委会协助工作</li>
+<li><strong>人大监督：</strong>处置结束后向本级人大常委会作专项工作报告</li>
+</ul>
+</div>
+
+<div class="answer-box">
+<h4>预防与应急准备</h4>
+<ul>
+<li><strong>预案体系：</strong>国家 - 地方 - 基层三级预案，动态修订</li>
+<li><strong>基础设施：</strong>国土空间规划需满足应急需求，建设应急避难场所</li>
+<li><strong>风险防控：</strong>一般、较大——县级调查登记评估；重大、特大——市级省级调查登记评估；县+政府——确定、调整区域</li>
+<li><strong>队伍建设：</strong>国家综合性消防救援队伍为骨干，专业、基层、社会应急力量协同</li>
+<li><strong>社会动员：</strong>应急知识进学校，村（居）委会、企业定期演练</li>
+<li><strong>保障体系：</strong>物资、运输、能源、通信、医疗等保障，科技支撑</li>
+</ul>
+</div>
+
+<div class="answer-box">
+<h4>监测与预警</h4>
+<ul>
+<li><strong>信息报告：</strong>及时、客观、真实，公民与单位有报告义务</li>
+<li><strong>预警分级：</strong>一级（红）、二级（橙）、三级（黄）、四级（蓝）</li>
+<li><strong>预警发布：</strong>县级以上地方人民政府发布，明确级别、范围与措施</li>
+<li><strong>预警响应：</strong>一、二级预警需紧急疏散、管控风险；三、四级预警需启动预案、发布警示</li>
+</ul>
+</div>
+
+<div class="answer-box">
+<h4>应急处置与救援</h4>
+<ul>
+<li><strong>响应分级：</strong>一级至四级，与事件、预警分级对应</li>
+<li><strong>处置主体：</strong>统一领导或组织处置的人民政府</li>
+<li><strong>处置措施：</strong>自然灾害/事故灾难/公共卫生事件——营救人员、疏散安置、医疗救治、管控风险、保障生活；社会安全事件——强制隔离、管制现场、保卫重点单位</li>
+<li><strong>特殊群体帮扶：</strong>保障无民事/限制民事行为能力人等群体权益</li>
+<li><strong>社会力量参与：</strong>鼓励企业、社会组织、志愿者参与救援</li>
+</ul>
+</div>
+
+<div class="answer-box">
+<h4>事后恢复与重建</h4>
+<ul>
+<li><strong>终止应急：</strong>危害消除后解除响应，防范次生事件</li>
+<li><strong>重建规划：</strong>损失评估、制定规划、争取上级支持</li>
+<li><strong>恢复保障：</strong>救助、补偿、抚慰受灾人员，恢复基础设施</li>
+<li><strong>总结评估：</strong>复盘工作，完善预案，接受审计监督</li>
+</ul>
+</div>
+
+<hr class="section-divider">
+
+<!-- ==================== 本章练习 ==================== -->
+
+<h2>五、本章练习</h2>
+
+<div class="question-box">
+<p><strong>1.</strong> 2025年8月，某县遭受特大山洪灾害，多处房屋倒塌、道路损毁。根据2024年修订的《突发事件应对法》，负责统一领导该县突发事件应对工作的行政主体是（ ）。</p>
+<p>A. 该县应急管理局</p>
+<p>B. 该县人民政府</p>
+<p>C. 市级人民政府应急管理部门</p>
+<p>D. 省级人民政府</p>
+<p class="answer">【答案】B</p>
+</div>
+
+<div class="question-box">
+<p><strong>2.</strong> 某社区接到气象部门发布的暴雨红色预警信号，根据《突发事件应对法》预警响应要求，社区应当立即采取的核心措施是（ ）。</p>
+<p>A. 发布警示通知，提醒居民减少外出</p>
+<p>B. 组织社区内低洼地段居民紧急疏散至避难场所</p>
+<p>C. 对社区内排水系统进行全面排查</p>
+<p>D. 启动应急志愿者队伍值班值守</p>
+<p class="answer">【答案】B</p>
+</div>
+
+<div class="question-box">
+<p><strong>3.</strong> 2025年某地级市发生重大群体性事件，社会秩序受到严重影响。根据《突发事件应对法》，组织处置的人民政府可以采取的针对性措施是（ ）。</p>
+<p>A. 对事发区域实施交通管制，查验现场人员身份证件</p>
+<p>B. 紧急调拨救灾物资，保障受灾人员基本生活</p>
+<p>C. 对涉事企业采取停产停业强制措施</p>
+<p>D. 发布橙色预警信号，启动二级应急响应</p>
+<p class="answer">【答案】A</p>
+</div>
+
+<div class="question-box">
+<p><strong>4.</strong> 2025年某县发生地震灾害，县政府在应急处置过程中，征用了某企业的10辆重型卡车用于运输救灾物资。根据《突发事件应对法》，灾害处置结束后，县政府应当对该企业采取的措施是（ ）。</p>
+<p>A. 及时归还车辆并依法给予补偿</p>
+<p>B. 仅需归还车辆，无需支付任何费用</p>
+<p>C. 对车辆进行维修后归还企业</p>
+<p>D. 将车辆折价收购，纳入政府应急物资储备</p>
+<p class="answer">【答案】A</p>
+</div>
+
+<div class="question-box">
+<p><strong>5.</strong> 根据2024年修订的《突发事件应对法》，关于突发事件预警制度的说法，正确的有（ ）。</p>
+<p>A. 预警级别分为一级、二级、三级、四级，一级为最高级</p>
+<p>B. 橙色预警属于二级预警，发布主体为县级以上地方人民政府</p>
+<p>C. 发布红色预警后，应当立即组织危险区域内人员疏散</p>
+<p>D. 预警信息应当明确级别、起始时间、影响范围和应对措施</p>
+<p>E. 预警信息发布后，无需根据事态发展调整或解除</p>
+<p class="answer">【答案】ABCD</p>
+</div>
+
+<div class="question-box">
+<p><strong>6.</strong> 根据2024年《突发事件应急预案管理办法》，关于应急预案演练的说法，正确的有（ ）。</p>
+<p>A. 专项应急预案每3年至少开展一次实战演练</p>
+<p>B. 基层组织的应急预案应当针对常见风险开展常态化演练</p>
+<p>C. 演练结束后应当进行评估总结，完善应急预案</p>
+<p>D. 演练情况应当报送本级人民政府应急管理部门备案</p>
+<p>E. 所有应急预案的演练都应当邀请专业救援队伍参与</p>
+<p class="answer">【答案】ABCD</p>
+</div>
+
+<p style="text-align:center; color:#999; margin-top:40px; font-size:0.85em;">
+📚 祝您学习顺利，考试成功！
+</p>
+
+</body>
+</html>
